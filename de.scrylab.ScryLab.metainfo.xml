@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="desktop-application">
+
+  <id>de.scrylab.ScryLab</id>
+  <name>ScryLab</name>
+  <summary>Data analysis for engineers</summary>
+  <summary xml:lang="de">Datenanalyse für Ingenieure</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://scrylab.de/terms-and-conditions/</project_license>
+
+  <developer id="de.scrylab">
+    <name>Dominik Tirschler</name>
+  </developer>
+
+  <description>
+    <p>
+      With ScryLab, data from a running Python environment or from measurement 
+      files can be explored in interactive plots for side-by-side 
+      comparison and analysis.
+    </p>
+    <p xml:lang="de">
+      Mit ScryLab lassen sich Daten aus einer laufenden Python-Umgebung oder aus
+      Messdateien in interaktiven Plots visualisieren, vergleichen und
+      analysieren.
+    </p>
+    <p>
+      It includes line, scatter, XY, frequency and spectrogram views, plus
+      tools from simple operations like addition, derivative and integral to
+      advanced analysis such as FFT and STFT, including moving averages and
+      regression.
+    </p>
+    <p xml:lang="de">
+      Dazu gehören Linien-, Streu-, XY-, Frequenz- und Spektrogramm-Ansichten
+      sowie Operationen für Addition, Ableitung, Integral, FFT, STFT,
+      gleitende Mittelwerte und Regression.
+    </p>
+    <p>
+      Supports MDF (.mf4, .mf3) and HDF5 (.h5, .hdf5) measurement files
+      and provides a local REST API for signal upload from any programming
+      environment or toolchain.
+    </p>
+    <p xml:lang="de">
+      Unterstützt MDF-Messdateien (.mf4, .mf3) sowie HDF5-Dateien (.h5,
+      .hdf5) und stellt eine lokale REST-API bereit, über die Signale aus
+      beliebigen Programmierumgebungen oder Toolchains übertragen
+      werden können.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">de.scrylab.ScryLab.desktop</launchable>
+
+  <url type="homepage">https://scrylab.de</url>
+  <url type="help">https://docs.scrylab.de</url>
+  <url type="contact">https://scrylab.de/contact</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#7f4fee</color>
+    <color type="primary" scheme_preference="dark">#3a226b</color>
+  </branding>
+
+  <requires>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <display_length compare="ge">768</display_length>
+  </requires>
+
+  <content_rating type="oars-1.1" />
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://scrylab.de/flathub/screenshots/0.1.7/main-app.png</image>
+      <caption>Browse and plot signals from measurement or simulation data.</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://scrylab.de/flathub/screenshots/0.1.7/transfer-function.png</image>
+      <caption>Apply signal operations like addition, derivative, integral, FFT, STFT and smoothing.</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://scrylab.de/flathub/screenshots/0.1.7/dataset-comparison.png</image>
+      <caption>Compare datasets side by side and analyze average values.</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://scrylab.de/flathub/screenshots/0.1.7/STFT.png</image>
+      <caption>Visualize signals with Short-Time Fourier Transform (STFT) and overlay reference orders.</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://scrylab.de/flathub/screenshots/0.1.7/command-palette.png</image>
+      <caption>Use the command palette to quickly access features and commands.</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.7" date="2026-06-05">
+      <url type="details">https://scrylab.de/changelogs/v0p1p7/</url>
+      <description>
+        <ul>
+          <li>Onboarding tutorial for new users</li>
+          <li>New toggle in the 2D plot to switch between panning and rectangle zoom</li>
+          <li>Drag-and-drop now carries over the visual state of a signal</li>
+          <li>Tabs can now be reordered by dragging</li>
+          <li>Tooltips now appear instantly when another tooltip was recently dismissed</li>
+        </ul>
+        <ul>
+          <li xml:lang="de">Onboarding-Tutorial für neue Nutzer</li>
+          <li xml:lang="de">Neuer Schalter im 2D-Plot zum Umschalten zwischen Verschieben und Rechteck-Zoom</li>
+          <li xml:lang="de">Drag &amp; Drop überträgt jetzt den visuellen Zustand eines Signals</li>
+          <li xml:lang="de">Tabs können jetzt per Drag &amp; Drop umsortiert werden</li>
+          <li xml:lang="de">Tooltips erscheinen jetzt sofort, wenn kurz zuvor ein anderer Tooltip geschlossen wurde</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.1.6" date="2026-05-16">
+      <url type="details">https://scrylab.de/changelogs/v0p1p6/</url>
+      <description>
+        <ul>
+          <li>Signal properties dialog: mirrors the existing properties widget in the sidebar</li>
+          <li>Context menu entries revised and extended with tooltips</li>
+          <li>Non-commercial watermark in plots</li>
+        </ul>
+        <ul>
+          <li xml:lang="de">Signal-Properties-Dialog: spiegelt das bestehende Properties-Widget in der Seitenleiste wieder</li>
+          <li xml:lang="de">Kontextmenü-Einträge überarbeitet und mit Tooltips erweitert</li>
+          <li xml:lang="de">Nicht-kommerzielles Wasserzeichen in Plots</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>

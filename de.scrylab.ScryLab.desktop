@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=ScryLab
+Name[de]=ScryLab
+GenericName=Data analysis
+GenericName[de]=Datenanalyse
+Comment=Signal analysis and visualization
+Comment[de]=Signalanalyse und Visualisierung
+Exec=ScryLab %F
+Icon=de.scrylab.ScryLab
+Terminal=false
+Type=Application
+Categories=Development;Engineering;
+MimeType=application/x-mf4;application/x-mf3;application/x-mdf;application/x-scrylab-project;
+Keywords=measurement;measurement data;plot;analysis;visualization;timeseries;mdf;mf4;hdf;hdf5;python;matlab;engineering;
+Keywords[de]=messung;messdaten;plot;analyse;visualisierung;zeitreihe;mdf;mf4;hdf;hdf5;python;matlab;ingenieur;
+StartupNotify=true
+StartupWMClass=ScryLab
