@@ -1,5 +1,8 @@
 app-id: de.scrylab.ScryLab
 
+tags:
+  - proprietary
+
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
@@ -18,35 +21,23 @@ finish-args:
 modules:
   - name: scrylab
     buildsystem: simple
+    build-options:
+      no-debuginfo: true
+      strip: false
     build-commands:
-      - install -Dm755 apply_extra.sh /app/bin/apply_extra
       - install -Dm755 scrylab-wrapper.sh /app/bin/ScryLab
-      - install -Dm644 de.scrylab.ScryLab.desktop /app/share/applications/de.scrylab.ScryLab.desktop
-      - install -Dm644 de.scrylab.ScryLab.metainfo.xml /app/share/metainfo/de.scrylab.ScryLab.metainfo.xml
-      - install -Dm644 de.scrylab.ScryLab.xml /app/share/mime/packages/de.scrylab.ScryLab.xml
-      - install -Dm644 de.scrylab.ScryLab.svg /app/share/icons/hicolor/scalable/apps/de.scrylab.ScryLab.svg
-      - install -Dm644 LICENSE /app/share/licenses/de.scrylab.ScryLab/LICENSE
+      - mkdir -p /app/lib
+      - cp -a ScryLab.flatpak/ScryLab.dist /app/lib/ScryLab.dist
+      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.desktop /app/share/applications/de.scrylab.ScryLab.desktop
+      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.metainfo.xml /app/share/metainfo/de.scrylab.ScryLab.metainfo.xml
+      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.xml /app/share/mime/packages/de.scrylab.ScryLab.xml
+      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.svg /app/share/icons/hicolor/scalable/apps/de.scrylab.ScryLab.svg
+      - install -Dm644 ScryLab.flatpak/LICENSE /app/share/licenses/de.scrylab.ScryLab/LICENSE
 
     sources:
-      - type: extra-data
-        filename: scrylab.tar.gz
-        only-arches:
-          - x86_64
-        url: https://releases.scrylab.de/linux/ScryLab-0.1.7-linux-x86_64.tar.gz
-        sha256: 9cbe2edbd107a85e4711499cdda02548aeec2bd4510a2cd6602f479fe9f5e047
-        size: 240944318
-
-      - type: file
-        path: apply_extra.sh
+      - type: archive
+        strip-components: 0
+        url: https://releases.scrylab.de/linux/ScryLab-0.1.8-linux-x86_64.tar.gz
+        sha256: bcdaad69ea957c5a823345030650d3c9a4c4db1e4b77d29e0895b7aaa9d83b86
       - type: file
         path: scrylab-wrapper.sh
-      - type: file
-        path: de.scrylab.ScryLab.desktop
-      - type: file
-        path: de.scrylab.ScryLab.metainfo.xml
-      - type: file
-        path: de.scrylab.ScryLab.xml
-      - type: file
-        path: de.scrylab.ScryLab.svg
-      - type: file
-        path: LICENSE
