@@ -15,7 +15,6 @@ finish-args:
   - --socket=fallback-x11
   - --device=dri
   - --share=network
-  - --filesystem=xdg-download
   - --filesystem=xdg-documents
 
 modules:
