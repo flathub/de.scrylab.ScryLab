@@ -11,14 +11,4 @@ if [ ! -x "$APP_BIN" ]; then
     exit 1
 fi
 
-if [ -z "${QT_QPA_PLATFORM:-}" ]; then
-    if [ -n "${WAYLAND_DISPLAY:-}" ]; then
-        export QT_QPA_PLATFORM="wayland"
-    elif [ -n "${DISPLAY:-}" ]; then
-        export QT_QPA_PLATFORM="xcb"
-    fi
-fi
-
-export QT_PLUGIN_PATH="$APP_DIR/PySide6/qt-plugins:${QT_PLUGIN_PATH:-}"
-
 exec "$APP_BIN" "$@"
