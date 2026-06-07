@@ -23,16 +23,15 @@ modules:
     build-commands:
       - install -Dm755 scrylab-wrapper.sh /app/bin/ScryLab
       - mkdir -p /app/lib
-      - cp -a ScryLab.flatpak/ScryLab.dist /app/lib/ScryLab.dist
-      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.desktop /app/share/applications/de.scrylab.ScryLab.desktop
-      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.metainfo.xml /app/share/metainfo/de.scrylab.ScryLab.metainfo.xml
-      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.xml /app/share/mime/packages/de.scrylab.ScryLab.xml
-      - install -Dm644 ScryLab.flatpak/de.scrylab.ScryLab.svg /app/share/icons/hicolor/scalable/apps/de.scrylab.ScryLab.svg
-      - install -Dm644 ScryLab.flatpak/LICENSE /app/share/licenses/de.scrylab.ScryLab/LICENSE
+      - cp -a ScryLab.dist /app/lib/ScryLab.dist
+      - install -Dm644 de.scrylab.ScryLab.desktop /app/share/applications/de.scrylab.ScryLab.desktop
+      - install -Dm644 de.scrylab.ScryLab.metainfo.xml /app/share/metainfo/de.scrylab.ScryLab.metainfo.xml
+      - install -Dm644 de.scrylab.ScryLab.xml /app/share/mime/packages/de.scrylab.ScryLab.xml
+      - install -Dm644 de.scrylab.ScryLab.svg /app/share/icons/hicolor/scalable/apps/de.scrylab.ScryLab.svg
+      - install -Dm644 LICENSE /app/share/licenses/de.scrylab.ScryLab/LICENSE
 
     sources:
       - type: archive
-        strip-components: 0
         url: https://releases.scrylab.de/linux/ScryLab-0.1.8-linux-x86_64.tar.gz
         sha256: bcdaad69ea957c5a823345030650d3c9a4c4db1e4b77d29e0895b7aaa9d83b86
       - type: file
