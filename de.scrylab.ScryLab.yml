@@ -20,9 +20,6 @@ finish-args:
 modules:
   - name: scrylab
     buildsystem: simple
-    build-options:
-      no-debuginfo: true
-      strip: false
     build-commands:
       - install -Dm755 scrylab-wrapper.sh /app/bin/ScryLab
       - mkdir -p /app/lib
