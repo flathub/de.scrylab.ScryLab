@@ -32,7 +32,7 @@ modules:
 
     sources:
       - type: archive
-        url: https://releases.scrylab.de/linux/ScryLab-0.2.5-hotfix-2-linux-x86_64.tar.gz
-        sha256: 82e7d5cdeaad5d7671be6f4e7d8fa809122b67e3ff4a5b8347c745666198a308
+        url: https://releases.scrylab.de/linux/ScryLab-0.2.6-linux-x86_64.tar.gz
+        sha256: c59166bc230e6c87e0389944675cf2926bbdce0e2cc3794592245eafd50979ce
       - type: file
         path: scrylab-wrapper.sh
