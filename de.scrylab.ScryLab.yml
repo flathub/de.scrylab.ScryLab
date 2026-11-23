@@ -29,7 +29,7 @@ modules:
 
     sources:
       - type: archive
-        url: https://releases.scrylab.de/linux/ScryLab-0.6.0-linux-x86_64.tar.gz
-        sha256: 5bf4e8f9a09e961c4d34cd324bcda7255f1986a750d07c5f6be9def99d90716d
+        url: https://releases.scrylab.de/linux/ScryLab-0.7.0-linux-x86_64.tar.gz
+        sha256: c05ce4c562dc634e6b3392491069b008b696d48305cee0af924df607616b9b46
       - type: file
         path: scrylab-wrapper.sh
